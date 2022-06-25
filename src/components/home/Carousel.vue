@@ -1,5 +1,5 @@
 <template>
-    <a-carousel arrows>
+    <a-carousel arrows autoplay>
         <router-link to="/home">
             <div class="h-100 slide-item"
                 style="background-image: url(https://imgaz1.chiccdn.com/os/202206/20220620044202_788.jpg);">

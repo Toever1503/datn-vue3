@@ -17,9 +17,7 @@
 <template>
   <Header />
   <div class="container mx-auto px-4">
-    <Carousel />
-    <Category />
-    <BestSellProduct />
+    <router-view />
   </div>
 
   <Footer />
@@ -27,9 +25,6 @@
 
 <script setup>
 import Header from "./Header.vue";
-import Carousel from "./home/Carousel.vue";
-import Category from "./home/Category.vue";
-import BestSellProduct from "./home/BestSellProduct.vue";
 import Footer from "./Footer.vue";
 
 </script>

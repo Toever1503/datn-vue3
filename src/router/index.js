@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../components/Home.vue";
 import Signin from "../pages/Signin.vue";
+import Signup from "../pages/Signup.vue";
 import ForgotPassword from "../pages/ForgotPassword.vue";
 // import Shop from '@/components/Shop.vue'
 // import Product from '@/components/Product.vue'
@@ -53,6 +54,11 @@ const router = createRouter({
       path: "/sign-in",
       component: Signin,
       name: "Đăng nhập"
+    },
+    {
+      path: "/sign-up",
+      component: Signup,
+      name: "Đăng ký"
     },
     {
       path: "/forgot-password",
