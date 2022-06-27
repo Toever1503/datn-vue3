@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../components/Home.vue";
+import Category from "../pages/Category.vue";
 import Signin from "../pages/Signin.vue";
 import Signup from "../pages/Signup.vue";
 import ForgotPassword from "../pages/ForgotPassword.vue";
@@ -21,6 +22,11 @@ const router = createRouter({
           path: "/",
           component: Home,
           name: "Home"
+        },
+        {
+          path: "category/:id/:name",
+          component: Category,
+          name: "Category"
         }
         // {
         //   path: '/shop',
