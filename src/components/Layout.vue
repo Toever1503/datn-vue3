@@ -16,7 +16,7 @@
 -->
 <template>
   <Header />
-  <div class="container mx-auto px-4">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-2">
     <router-view />
   </div>
 

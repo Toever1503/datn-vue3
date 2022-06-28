@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../components/Home.vue";
 import Category from "../pages/Category.vue";
+import ProductDetail from "../pages/ProductDetail.vue";
+import slick from "../pages/slicker.vue";
 import Signin from "../pages/Signin.vue";
 import Signup from "../pages/Signup.vue";
 import ForgotPassword from "../pages/ForgotPassword.vue";
@@ -27,6 +29,16 @@ const router = createRouter({
           path: "category/:id/:name",
           component: Category,
           name: "Category"
+        } ,
+        {
+          path: "product/:id/:name",
+          component: ProductDetail,
+          name: "product"
+        },
+        {
+          path: "slick",
+          component: slick,
+          name: "slicker"
         }
         // {
         //   path: '/shop',

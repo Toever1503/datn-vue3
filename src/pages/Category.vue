@@ -1,6 +1,6 @@
 <template>
-  <div id="category-page" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-2 flex">
-    <div id="category-sidebar" style="width: 20%">
+  <div id="category-page" class="flex">
+    <div id="category-sidebar" class="p-2" style="width: 20%">
       <h3>
         BỘ LỌC TÌM KIẾM
       </h3>
@@ -9,17 +9,19 @@
         <h4>Khoảng Giá</h4>
         <a-input-group compact>
           <a-input
-            style="width: 42%;text-align: center"
-            placeholder="Từ"
+              type="number"
+              style="width: 42%;text-align: center"
+              placeholder="Từ"
           />
           <a-input
-            style="width: 30px; border-left: 0; pointer-events: none; background-color: #fff"
-            placeholder="~"
-            disabled
+              style="width: 30px; border-left: 0; pointer-events: none; background-color: #fff"
+              placeholder="~"
+              disabled
           />
           <a-input
-            style="width: 42%; text-align: center; border-left: 0"
-            placeholder="Đến"
+              type="number"
+              style="width: 42%; text-align: center; border-left: 0"
+              placeholder="Đến"
           />
         </a-input-group>
       </div>
@@ -118,27 +120,27 @@
             </template>
           </a-dropdown>
           <div
-            class="max-w-2xl mx-auto py-16 px-4 sm:py-8 sm:px-6 lg:max-w-7xl lg:max-w-screen-lg lg:max-w-screen-xl lg:max-w-screen-2xl lg:px-5">
+              class="max-w-2xl mx-auto py-16 px-4 sm:py-8 sm:px-6 lg:max-w-7xl lg:max-w-screen-lg lg:max-w-screen-xl lg:max-w-screen-2xl lg:px-5">
             <div
-              class="product-list mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8"
+                class="product-list mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8"
             >
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
+              <Product/>
+              <Product/>
+              <Product/>
+              <Product/>
+              <Product/>
+              <Product/>
+              <Product/>
+              <Product/>
+              <Product/>
+              <Product/>
 
               <!-- More products... -->
             </div>
 
             <div class="m-auto mt-2 flex justify-center">
               <a-pagination v-model="pageConfig" @change="onChangePage" size="small" :total="500" :responsive="true"
-                            :showSizeChanger="false" />
+                            :showSizeChanger="false"/>
             </div>
 
 
@@ -150,9 +152,9 @@
 </template>
 
 <script setup>
-import { useRoute } from "vue-router";
+import {useRoute} from "vue-router";
 import Product from "../components/Product.vue";
-import { onMounted, ref } from "vue";
+import {onMounted, ref} from "vue";
 
 const route = useRoute();
 const categoryId = ref(null);
@@ -182,6 +184,10 @@ onMounted(() => {
 </script>
 
 <style>
+#category-page #category-sidebar, #category-page #category-content {
+  background-color: rgb(233 231 231 / 18%);
+}
+
 #category-page .variation-filter {
   padding: 2px;
   border-top: 1px solid #cfcfcf;

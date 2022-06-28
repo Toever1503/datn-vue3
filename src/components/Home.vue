@@ -1,5 +1,4 @@
 <template>
-
   <Carousel/>
   <Category/>
   <LatestProduct />

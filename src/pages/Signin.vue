@@ -27,7 +27,7 @@
     <div class="max-w-lg w-full space-y-8 p-5 h-fit bg-white">
       <div>
         <router-link to="/">
-          <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+          <img class="mx-auto h-12 w-auto" :src="Logo"
                alt="Workflow">
         </router-link>
         <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Đăng nhập vào tài khoản của bạn</h2>
@@ -83,7 +83,7 @@
 </template>
 
 <script setup>
-
+import Logo from '../assets/logoB.png';
 import {reactive, ref} from "vue";
 
 const loginLoading = ref(false);
