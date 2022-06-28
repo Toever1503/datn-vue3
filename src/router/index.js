@@ -3,6 +3,7 @@ import Home from "../components/Home.vue";
 import Category from "../pages/Category.vue";
 import ProductDetail from "../pages/ProductDetail.vue";
 import slick from "../pages/slicker.vue";
+import Cart from "../pages/Cart.vue";
 import Signin from "../pages/Signin.vue";
 import Signup from "../pages/Signup.vue";
 import ForgotPassword from "../pages/ForgotPassword.vue";
@@ -39,6 +40,11 @@ const router = createRouter({
           path: "slick",
           component: slick,
           name: "slicker"
+        },
+        {
+          path: "my-cart",
+          component: Cart,
+          name: "Giỏ hàng"
         }
         // {
         //   path: '/shop',
