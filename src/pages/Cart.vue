@@ -1,12 +1,13 @@
 <template>
   <div id="cart-page" style="min-height: 600px">
     <a-table :columns="columns"
+             style="border: 1px solid #80808040"
              :bordered="true"
              :loading="tblLoading"
              :data-source="dataCart"
              :pagination="false"
              :customHeaderCell="customHeaderCell"
-             :row-selection="{ selectedRowKeys: selectedRowKeys, onChange: onSelectKeyChange }"
+             :row-selection="{ selectedRowKeys: selectedRowKeys.data, onChange: onSelectKeyChange }"
              size="middle">
 
       <template #bodyCell="{ column, record }">
@@ -20,10 +21,8 @@
           <div class="flex" style="height: 80px">
             <img style="width: 80px;"
                  src="https://imgaz1.chiccdn.com/os/202206/20220620021849_365.jpg.webp">
-            <span class="m-auto ml-2 h-fit" >
+            <span class="m-auto ml-2 h-fit">
               têffffstêffffstêffffstêffffstêffffstêffffstêffffs
-              têffffstêffffs
-               têffffstêffffstêffffstêffffstêffffstêffffstêffffs
               têffffstêffffs
             </span>
           </div>
@@ -46,7 +45,7 @@ const columns = [
     dataIndex: "product",
     key: "product",
     align: "center",
-    width: '500px'
+    width: "500px"
   },
   {
     title: "Đơn giá",
@@ -96,7 +95,9 @@ const dataCart = [{
 ];
 
 
-const selectedRowKeys = [];
+const selectedRowKeys = reactive({
+  data: []
+});
 const tblLoading = reactive(false);
 
 const customHeaderCell = (record) => {
@@ -107,7 +108,7 @@ const customHeaderCell = (record) => {
 };
 const onSelectKeyChange = selectedRowKeys => {
   console.log("selectedRowKeys changed: ", selectedRowKeys);
-  this.selectedRowKeys = selectedRowKeys;
+  this.selectedRowKeys.data = selectedRowKeys;
 };
 
 const deleteItemOutOfCart = (row) => {
@@ -118,7 +119,7 @@ const deleteItemOutOfCart = (row) => {
 
 <style>
 #cart-page th.ant-table-cell {
-  background-color: white !important;
+  background-color: #56c2e3a1 !important;
   border: none;
   border-bottom: 1px solid #f0f0f0;
 }
