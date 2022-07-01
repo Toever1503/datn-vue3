@@ -14,7 +14,8 @@
     "ant-design-vue": "^3.2.7",
     "pinia": "^2.0.14",
     "vue": "^3.2.37",
-    "vue-router": "^4.0.16"
+    "vue-router": "^4.0.16",
+    "vue-ssr-carousel": "^1.4.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
