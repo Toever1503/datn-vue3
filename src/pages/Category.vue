@@ -99,7 +99,6 @@
 
 
     </div>
-
     <div id="category-content" style="width: 80%">
       <div id="best-sell-product">
         <div class="bg-white">
